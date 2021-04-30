@@ -10,18 +10,32 @@
             width: 35%;
             margin: 10px auto;
         }
-
         table thead{
             text-align: left;
             background-color: black;
             color: #fff;
         }
         table td{
-            boarder: 1px solid black;
+            border: 1px solid black;
             padding:4px 8px;
         }
         table tfoot{
             background-color: darkgreen;
+        }
+        #container {
+            border: solid 2px black;
+            background-color: lightblue;
+            height: 500px;
+            width: 600px;
+        }
+        #lorem {
+            color: black;
+            border: solid 2px black;
+            background-color: white;
+            left: 60px;
+            right: 60px;
+
+
         }
 
 
@@ -32,8 +46,8 @@
 </head>
 <body>
 
-<h1>Welcome to my Page of Numbers</h1>
-<div>
+<h3>Welcome to my Page of Numbers</h3>
+
 <table>
     <thead>
         <tr>
@@ -128,10 +142,11 @@
     </tr>
     </tfoot>
 </table>
-</div>
 
-<div>
-
+<div id="container">
+    <div id="lorem">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget ante sed augue pretium porttitor. Etiam feugiat iaculis augue, posuere eleifend leo eleifend eget. Nullam sit amet est nisi. Vivamus at gravida tellus, in posuere urna. Quisque convallis mauris feugiat metus molestie, eu dignissim est accumsan. Vivamus a mattis nisi. Morbi eget mi eu nunc convallis rhoncus. Etiam facilisis aliquet placerat. Proin eu rutrum nulla. Duis in lorem ac dui sodales porttitor. Proin a vulputate nunc. Fusce in dolor nec ligula rhoncus mollis nec et est. Aliquam ut tellus gravida, semper nibh sed, facilisis arcu. Curabitur elementum, justo ut vulputate euismod, tellus nibh pretium ex, sit amet lobortis leo tortor eu massa.
+    </div>
 </div>
 
 <div>
@@ -153,5 +168,6 @@
 <nav>
 <a href="https://shrouded-basin-10273.herokuapp.com/index.html">Take me back!</a> <br>
 </nav>
+
 </body>
 </html>
