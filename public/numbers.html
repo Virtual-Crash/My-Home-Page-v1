@@ -7,36 +7,72 @@
     <style>
 
         body {
-            width: 35%;
-            margin: 10px auto;
+            width: 30%;
+            margin: 25px auto;
+        }
+
+        table, thead, td, tfoot{
+            border: 2px solid black;
+            border-collapse: collapse;
         }
         table thead{
             text-align: left;
             background-color: black;
             color: #fff;
+
         }
         table td{
-            border: 1px solid black;
-            padding:4px 8px;
+            padding: 1px 50px 1px 1px;
+
         }
         table tfoot{
             background-color: darkgreen;
+
         }
         #container {
             border: solid 2px black;
-            background-color: lightblue;
-            height: 500px;
+            background-color: lightgray;
+            height: 325px;
             width: 600px;
+            position: relative;
+
         }
-        #lorem {
+        #loremipsum {
             color: black;
             border: solid 2px black;
             background-color: white;
-            left: 60px;
-            right: 60px;
-
+            position: absolute;
+            margin: 5%;
 
         }
+        img{
+            align:center;
+        }
+
+        #container-two{
+         display: flex;
+            flex-direction: row;
+            background-color: peachpuff;
+            border: solid 2px black;
+            border-collapse: collapse;
+        }
+        left{
+            border: solid 1px black;
+            flex: 0 1 10%;
+            background-color: tan;
+
+        }
+        mid{
+            flex: 0 1 80%;
+            border: solid 1px black;
+        }
+        right{
+            border: solid 1px black;
+            flex: 0 1 10%;
+            background-color: tan;
+
+        }
+
 
 
 
@@ -142,10 +178,27 @@
     </tr>
     </tfoot>
 </table>
+<br>
 
 <div id="container">
-    <div id="lorem">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget ante sed augue pretium porttitor. Etiam feugiat iaculis augue, posuere eleifend leo eleifend eget. Nullam sit amet est nisi. Vivamus at gravida tellus, in posuere urna. Quisque convallis mauris feugiat metus molestie, eu dignissim est accumsan. Vivamus a mattis nisi. Morbi eget mi eu nunc convallis rhoncus. Etiam facilisis aliquet placerat. Proin eu rutrum nulla. Duis in lorem ac dui sodales porttitor. Proin a vulputate nunc. Fusce in dolor nec ligula rhoncus mollis nec et est. Aliquam ut tellus gravida, semper nibh sed, facilisis arcu. Curabitur elementum, justo ut vulputate euismod, tellus nibh pretium ex, sit amet lobortis leo tortor eu massa.
+    <div id="loremipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus eget ante sed augue pretium porttitor.
+        Etiam feugiat iaculis augue, posuere eleifend leo eleifend eget.
+        Nullam sit amet est nisi. Vivamus at gravida tellus, in posuere urna.
+        Quisque convallis mauris feugiat metus molestie, eu dignissim est accumsan.
+        Vivamus a mattis nisi. Morbi eget mi eu nunc convallis rhoncus.
+        Etiam facilisis aliquet placerat. Proin eu rutrum nulla.
+        Duis in lorem ac dui sodales porttitor. Proin a vulputate nunc.
+        Fusce in dolor nec ligula rhoncus mollis nec et est.
+        Aliquam ut tellus gravida, semper nibh sed, facilisis arcu.
+        Curabitur elementum, justo ut vulputate euismod, tellus nibh pretium ex, sit amet lobortis leo tortor eu massa.
+        Maecenas quis est vitae orci eleifend malesuada id vitae dui.
+        Pellentesque ut ex ipsum. Mauris ut posuere est.
+        Donec pharetra urna eu tellus ornare semper eu non magna.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+        Curabitur sagittis semper lectus, id cursus dui.
+        Sed non eros vitae lectus rutrum fringilla.
     </div>
 </div>
 
@@ -159,6 +212,100 @@
 </div>
 
 <div>
+    <div id="container-two">
+        <left>
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit,
+            sed do eiusmod tempor
+            incididunt ut labore et dolore
+            magna aliqua. Ut enim ad
+            minim veniam, quis nostrud
+            exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor
+            in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat
+            nulla pariatur.
+            Excepteur sint occaecat
+            cupidatat non proident, sunt
+            in culpa qui
+            officia deserunt
+            mollit anim id
+            est laborum.
+
+        </left>
+        <mid>
+            Sed ut perspiciatis unde omnis iste natus error sit
+            voluptatem accusantium doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore
+            veritatis et quasi architecto beatae vitae dicta sunt
+            explicabo. Nemo enim ipsam voluptatem quia
+            voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt. Neque porro quisquam
+            est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia non numquam eius
+            modi tempora incidunt ut labore et dolore magnam
+            aliquam quaerat voluptatem. Ut enim ad minima
+            veniam, quis nostrum exercitationem ullam corporis
+            suscipit laboriosam, nisi ut aliquid ex ea commodi
+            consequatur? Quis autem vel eum iure reprehenderit
+            qui in ea voluptate velit esse quam nihil molestiae
+            consequatur, vel illum qui dolorem eum fugiat quo
+            voluptas nulla pariatur? Sed ut perspiciatis unde omnis
+            iste natus error sit voluptatem accusantium
+            doloremque laudantium, totam rem aperiam, eaque
+            ipsa quae ab illo inventore veritatis et quasi architecto
+            beatae vitae dicta sunt explicabo. Nemo enim ipsam
+            voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntur magni dolores eos qui
+            ratione voluptatem sequi nesciunt. Neque porro
+            quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia non numquam eius
+            modi tempora incidunt ut labore et dolore magnam
+            aliquam quaerat voluptatem. Ut enim ad minima
+            veniam, quis nostrum exercitationem ullam corporis
+            suscipit laboriosam, nisi ut aliquid ex ea commodi
+            consequatur? Quis autem vel eum iure reprehenderit
+            qui in ea voluptate velit esse quam nihil molestiae
+            consequatur, vel illum qui dolorem eum fugiat quo
+            voluptas nulla pariatur?
+
+        </mid>
+        <right>
+            Lorem ipsum
+            dolor sit amet,
+            consectetur
+            adipiscing elit,
+            sed do eiusmod
+            tempor
+            incididunt ut
+            labore et dolore
+            magna aliqua. Ut
+            enim ad minim
+            veniam, quis
+            nostrud
+            exercitation
+            ullamco laboris
+            nisi ut aliquip ex
+            ea commodo
+            consequat. Duis
+            aute irure dolor
+            in reprehenderit
+            in voluptate velit
+            esse cillum dolore
+            eu fugiat nulla
+            pariatur.
+            Excepteur sint
+            occaecat
+            cupidatat non
+            proident, sunt in
+            culpa qui officia
+            deserunt mollit
+            anim id est
+
+        </right>
+    </div>
 
 
 </div>
