@@ -59,7 +59,14 @@
 </form>
 
 <form id="textbox">
-    <label for="userInput" > Enter in a letter or your word guess: </label> <br> <br>
+
+    <p>Your random word length is: </p>
+    <p id="hangmanword">
+        No word given yet!
+    </p>
+
+
+    <label for="userInput" > Enter in a letter or your word guess: </label> <br><br>
     <input type="text" id="userinput" name="userinput" placeholder="Type a word or a letter">
     <br>
     <br>
@@ -67,6 +74,12 @@
         <button type="submit">Submit</button>
 
     </div>
+    <br>
+
+    <p id="neatdisplay">
+        You have not guessed any letters yet
+    </p>
+
 
 </form>
 <script type="text/javascript" src="./javascripts/hangman.js"></script>

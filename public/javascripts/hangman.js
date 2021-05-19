@@ -28,8 +28,8 @@ console.log("JavaScript has loaded")
 var cat = "";
 var maxletters = -1;
 var secretWord = "";
-var userSelectedGuess = "";
-
+var guesses = [];
+var userGuessDisplay = [];
 
 function startHangman(event) {
     event.preventDefault()
@@ -91,31 +91,76 @@ function inTheGame(event) {
 
     console.log(userSelectedGuess);
 
+    var hangmanword = document.getElementById("hangmanword");
+        hangmanword.innerText = secretWord.length;
+
+
+    // Create an array based off of how many letters there are in the letter
+
+    userGuessDisplay = secretWord.split("");
+
+
+
+    // Then when the user makes a guess i can pull the position and replace it
+    //use example coral or _____
+
+    //need to take the length and turn it into _
+    // userGuessDisplay[j] = "_";
+
+
+     //user guesses r which is at postion 3
+
+     //replace the third position with r or __r__
+
+     //returns underscores where there are no letters  and letters where their guesses are
+     //c_ral
+    //var arr1 = ["t","u","r","t","l","e"]
+    // var arr2 = [ "u","r","l","e"]
+
+
+    function returnDuplicated(arrayWord, arrayGuess){
+        var output = []
+        console.log({arrayWord, arrayGuess})
+        for(var i = 0; i < arrayWord.length; i++){
+            var didItWork = false
+            for(var j = 0; j < arrayGuess.length; j++){
+                if(arrayWord[i] === arrayGuess[j]){
+                    output.push(arrayWord[i])
+                    didItWork = true
+                }
+            }
+            if(!didItWork){
+                output.push("_")
+            }
+        }
+        return output
+
+        // return array of duplicated
+    }
+
 
     if (userSelectedGuess.length < 2) {
         //This was take the word and make it into an array
         var wordSplit = secretWord.split("");
+        guesses.push(userSelectedGuess)
+        console.log(returnDuplicated(userGuessDisplay, guesses))
 
 
         console.log({wordSplit})
 
 
-        var letterLocation = 0;
-        for (var i = 0; i < secretWord.length; i++) {
-            if (wordSplit[i] === userSelectedGuess) {
-                letterLocation++;
-                console.log("You have guessed correctly!")
-                console.log("That is in position number " + letterLocation)
-            } else {
-                letterLocation++;
-            }
-        }
+        var neatdisplay = document.getElementById("neatdisplay");
+        neatdisplay.innerText = returnDuplicated(userGuessDisplay, guesses);
 
 
     } else if (userSelectedGuess.length === secretWord.length) {
         // compare their guess to the secret word
         if (userSelectedGuess === secretWord) {
             console.log("You win the game");
+
+            var neatdisplay = document.getElementById("neatdisplay");
+            neatdisplay.innerText = userSelectedGuess + " You win the game!";
+
         } else {
             console.log("Your word was not correct, the game has ended.")
         }
@@ -127,7 +172,14 @@ function inTheGame(event) {
         guessCount++;
     }
 
+
 }
+
+//function displayNew(event){
+  //  event.preventDefault()
+  //  document.writeln(secretWord.length)
+
+//}
 
 
 let userSelectOptions = document.querySelector("#mainform");
