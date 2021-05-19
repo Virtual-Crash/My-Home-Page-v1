@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            border-style: solid;
+            text-align: center;
+
+        }
+
+    </style>
+</head>
+<body>
+<br>
+<h1> Welcome to Hangman! </h1>
+
+<br>
+
+<p> Choose if you would like a max of 4 or 6 letter words: </p>
+
+
+<!--Radio buttons to choose the max words you want to use -->
+<form id="mainform">
+<div class="radio-buttons">
+    <input class="form-check-input" type="radio" name="maxletters" id="max4letters" value="4">
+    <label class="form-check-label" for="max4letters">
+        Max 4 Letters
+    </label>
+    <br>
+    <input class="form-check-input" type="radio" name="maxletters" id="max6letters" value="6" checked>
+    <label class="form-check-label" for="max6letters">
+        Max 6 Letters
+    </label>
+</div>
+    <br>
+
+    <p>Pick a category: </p>
+<!-- Drop down bar to choose the theme of the word the user wants -->
+<div class="drop-down">
+    <select class="form-select" aria-label="Default select example" name="cat">
+        <option selected>Open this select menu</option>
+        <option value="ocean">Ocean</option>
+        <option value="food">Food</option>
+
+    </select>
+</div>
+    <br>
+
+    <div>
+        <button type="submit">Submit</button>
+
+    </div>
+<br>
+
+</form>
+
+<form id="textbox">
+
+    <p>Your random word length is: </p>
+    <p id="hangmanword">
+        No word given yet!
+    </p>
+
+
+    <label for="userInput" > Enter in a letter or your word guess: </label> <br><br>
+    <input type="text" id="userinput" name="userinput" placeholder="Type a word or a letter">
+    <br>
+    <br>
+    <div>
+        <button type="submit">Submit</button>
+
+    </div>
+    <br>
+
+    <p id="neatdisplay">
+        You have not guessed any letters yet
+    </p>
+
+
+</form>
+<script type="text/javascript" src="./javascripts/hangman.js"></script>
+
+
+</body>
+</html>
